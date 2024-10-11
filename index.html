@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Logo.</a>
+            </div>
+            <input type="checkbox" id="click">
+
+            <label for="click" class="mainicon">
+                <div class="menu">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </label>
+            <ul>
+                <li><a href="#" class="active" style="--navAni:1">Home</a></li>
+                <li><a href="#" style="--navAni:2">About</a></li>
+                <li><a href="#" style="--navAni:3">Skills</a></li>
+                <li><a href="#" style="--navAni:4">Portfolio</a></li>
+                <li><a href="#" style="--navAni:5">Contact</a></li>
+            </ul>
+            <label class="mode">
+                <input type="checkbox" id="darkModeToggle">
+                <i class='bx bxs-moon'></i>
+            </label>
+        </div>
+    </header>
+
+
+    <section class="container">
+        <div class="main">
+            <div class="images">
+                <img src="farid.jpg" alt="" class="img-w">
+                <span class="bg-effect-1">
+                    <span class="bg-effect-1"></span>
+
+                </span>
+            </div>
+            <div class="detail">
+                <h3>Hi, I'm</h3>
+                <h1><span style="color:#f9532d;">Farid Syaiful Aqwam</span></h1>
+                <p>I'm a junior Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by
+                    web development solutions
+                </p>
+                <div class="social">
+                    <a href="" style="--socialAni:1"><i class='bx bxl-linkedin'></i></a>
+                    <a href="" style="--socialAni:2"><i class='bx bxl-instagram'></i></a>
+                    <a href="" style="--socialAni:3"><i class='bx bxl-github'></i></a>
+                    <a href="" style="--socialAni:4"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="aboutInfo">
+            <h1>About</h1>
+            <span>Who i am?</span>
+        </div>
+
+        <div class="aboutRow">
+
+            <div class="aboutText" data-aos="slide-left">
+                <p class="about-title">Hellow, I am Farid Syaiful Aqwam & I am Graphic & Web Designer</p>
+                <p class="aboutDisc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium excepturi
+                    quia molestiae nisi fuga deserunt, obcaecati accusamus quisquam aliquam consequatur esse iusto
+                    laboriosam sit doloremque neque perspiciatis voluptas sed porro.</p>
+                <button class="cBtn">Download CV</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="aboutInfo">
+            <h1>Services</h1>
+            <span>What We Provide?</span>
+        </div>
+        <div class="serviceRow" data-aos="flip-up">
+            <div class="serviceBox">
+                <img src="b2.png" alt="">
+                <h2>Web Designer</h2>
+                <p>Lorem ipsum dolo sit amet, consectetur adipisicing elit. Impedit tempora cumque Impedit odio!</p>
+            </div>
+
+            <div class="serviceBox">
+                <img src="b2.png" alt="">
+                <h2>Web Developer</h2>
+                <p>Lorem ipsum dolo sit amet, consectetur adipisicing elit. Impedit tempora cumque Impedit odio!</p>
+            </div>
+
+            <div class="serviceBox">
+                <img src="b2.png" alt="">
+                <h2>App Developer</h2>
+                <p>Lorem ipsum dolo sit amet, consectetur adipisicing elit. Impedit tempora cumque Impedit odio!</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <div class="aboutInfo">
+            <h1 style="color:#fff;">Get in Touch</h1>
+            <span style="color:#000;">We are Available</span>
+        </div>
+
+        <div class="contactRow">
+
+            <div class="contactImg">
+                <img src="header.png" data-aos="slide-right">
+            </div>
+
+            <div class="contactForm" data-aos="slide-left">
+                <form action="">
+                    <h1>Contect with us </h1>
+                    <input type="text" name="name" placeholder="Name"><br>
+                    <input type="email" name="email" placeholder="Email"><br>
+                    <textarea name="message" id="" cols="30" rows="5" placeholder="Message"></textarea><br>
+                    <button type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footerDev">
+            <p>Development By</p>
+            <h1>Farid Syaiful Aqwam</h1>
+        </div>
+        <div class="footerIcon">
+            <img src="logo.png" alt="logo">
+            <p>&copy;2024</p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
