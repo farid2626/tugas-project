@@ -73,7 +73,8 @@
 
             <div class="aboutText" data-aos="slide-left">
                 <p class="about-title">Hellow, I am Farid Syaiful Aqwam & I am Web developmer</p>
-                <p class="aboutDisc">I have HTML, CSS, JavaScript, PHP, skills. and also framework libraries such as react js, laravel, bootstrap.</p>
+                <p class="aboutDisc">I have HTML, CSS, JavaScript, PHP, skills. and also framework libraries such as
+                    react js, laravel, bootstrap.</p>
                 <button class="cBtn">Download CV</button>
             </div>
 
@@ -120,13 +121,15 @@
             </div>
 
             <div class="contactForm" data-aos="slide-left">
-                <form action="">
+                <form id="postForm">
                     <h1>Contect with us </h1>
-                    <input type="text" name="name" placeholder="Name"><br>
-                    <input type="email" name="email" placeholder="Email"><br>
-                    <textarea name="message" id="" cols="30" rows="5" placeholder="Message"></textarea><br>
+                    <label for="userId">User ID:</label>
+                    <input type="text" id="userId" name="userId"><br>
+                    <label for="title">Tittle:</label>
+                    <input type="text" id="title" name="title"><br>
+                    <label for="body">Body:</label>
+                    <textarea id="body" name="body" rows="4" cols="50"></textarea><br>
                     <button type="submit">Submit</button>
-
                 </form>
             </div>
         </div>
@@ -138,12 +141,43 @@
             <h1>Farid Syaiful Aqwam</h1>
         </div>
         <div class="footerIcon">
-            <img src="logo.png" alt="logo">
             <p>&copy;2024</p>
         </div>
     </section>
 
-
+    <script>
+        document
+            .getElementById("postForm")
+            .addEventListener("submit", function (event) {
+                event.preventDefault(); // Mencegah pengiriman formulir secara default
+                const formData = {
+                    userId: document.queryselector('input[name="userId"]').value,
+                    tittle: document.queryselector('input[name="tittle"]').value,
+                    body: document.queryselector('input[name="body"]').value,
+                };
+                fetch("https://lumoshive-academy-email-api.vercel.app/send-email", {
+                    method: "POST",
+                    headers: {
+                        "Access-Control-Allow-Origin": "*",
+                        "Content-Type": "application/json",},
+                        "x-api-key": "RJS1-202406",
+                    body: JSON.stringify(),
+                    to: "faridsyaiful99@gmail.com",
+                    name: "nama pengirim",
+                    subject: "subject pengirim",
+                    text: "pesan dari pengirim",
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                    document.getElementById("postForm").reset();
+                        alert("Successfully sent!");
+                    })
+                    .catch((error) => {
+                        console.error("Error:", error);
+                    });
+            });
+            
+    </script>
 </body>
 
 </html>
